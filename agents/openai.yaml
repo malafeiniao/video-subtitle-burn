@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频字幕压制"
+  short_description: "将已有字幕压成单语或双语视频，支持字体配置、样片与本地检查"
+  default_prompt: "使用 $video-subtitle-burn 将视频与已校对字幕制作成硬字幕 MP4，并检查样片效果。"

@@ -1,0 +1,7 @@
+1
+00:00:00,500 --> 00:00:02,500
+Welcome to the subtitle burning tool.
+
+2
+00:00:03,000 --> 00:00:05,500
+Keep your text and timing. Choose your font and style.
