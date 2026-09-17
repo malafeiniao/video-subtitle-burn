@@ -2,6 +2,8 @@
 
 将已有字幕烧进视频画面，生成可以直接播放和分发的 MP4。适用于课程、访谈、产品介绍、社交媒体视频等，不绑定任何品牌。
 
+[下载可安装 ZIP](https://github.com/malafeiniao/video-subtitle-burn/releases/latest) · [查看自动化测试](https://github.com/malafeiniao/video-subtitle-burn/actions)
+
 **输入：** 视频 + 已校对字幕 + 字体。**输出：** H.264 MP4 + 可编辑 ASS + JSON 检查报告 + FFmpeg 日志。
 
 - 单语 SRT、基础 WebVTT、已含双语的 SRT；也支持时间完全对应的两份字幕。

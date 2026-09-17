@@ -16,7 +16,8 @@ class SubtitleTests(unittest.TestCase):
     def parse(self, text, suffix='.srt'):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / ('caption' + suffix)
-            path.write_text(text, encoding='utf-8')
+            # Write exact fixture bytes: Windows text mode would turn CRLF into CRCRLF.
+            path.write_bytes(text.encode('utf-8'))
             return burn.parse_subtitles(path)
 
     def test_bom_crlf_and_approved_punctuation(self):

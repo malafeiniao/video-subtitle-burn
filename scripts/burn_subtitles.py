@@ -31,6 +31,9 @@ class Cue:
 
 
 def run(argv, **kwargs):
+    if kwargs.get('text'):
+        kwargs.setdefault('encoding', 'utf-8')
+        kwargs.setdefault('errors', 'replace')
     result = subprocess.run([str(a) for a in argv], stdin=subprocess.DEVNULL,
                             capture_output=True, **kwargs)
     if result.returncode:
@@ -442,6 +445,10 @@ def parser():
 
 
 def main():
+    # A redirected Windows console may otherwise choose a legacy code page.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, 'reconfigure'):
+            stream.reconfigure(encoding='utf-8')
     p = parser()
     args = p.parse_args()
     try:

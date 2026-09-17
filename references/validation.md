@@ -27,6 +27,8 @@
 - Windows、macOS、Linux：Python 3.10 / 3.13 的纯 Python 测试与 ZIP 打包。
 - Linux：安装 FFmpeg 与 DejaVu 字体，执行全套真实渲染测试。
 
+2026-09-17 已在 GitHub Actions 的 Linux 环境完成 16 项测试（含真实压制）。首次 Windows 运行暴露了测试样例在文本模式下重复添加回车的问题，已改为按原始字节写入；命令行同时显式使用 UTF-8 输出，避免重定向时采用旧代码页。
+
 GitHub 上各次实际运行结果以 Actions 为准。Windows 尚未在本地执行 FFmpeg 端到端渲染，不能把纯 Python 测试通过当成所有平台所有 FFmpeg 发行包均可用的保证。
 
 ## 复现
